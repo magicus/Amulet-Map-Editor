@@ -40,7 +40,7 @@ jobs:
 
     - name: PyInstaller build
       run: |
-        python -m PyInstaller -y Amulet.spec
+        python -m PyInstaller -y Amulet.spec --windowed
         cd dist
         if [ "$RUNNER_OS" == "Windows" ]; then
           7z a Amulet-v${{ github.event.release.tag_name }}-windows-x64.zip Amulet
