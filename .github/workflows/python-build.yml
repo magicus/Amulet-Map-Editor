@@ -4,6 +4,9 @@
 name: Build
 
 on:
+  push:
+    branches-ignore:
+      - pr/*
   release:
     types: [published]
 
